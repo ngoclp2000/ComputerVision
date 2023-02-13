@@ -42,4 +42,7 @@ for rows in range(max_size[0]+1,3,-1):
             break;
     if ret:
         break
-cv2.drawChessboardCorners(img, result, corners, ret)
+
+result_img = cv2.drawChessboardCorners(im_th_tz, result, corners, ret)
+cv2.imshow("Result Image", result_img)
+cv2.waitKey(10000)
